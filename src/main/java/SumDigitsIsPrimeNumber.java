@@ -17,10 +17,10 @@ public class SumDigitsIsPrimeNumber {
     }
 
     protected boolean isPrime(int number) {
-        return !IntStream
+        return IntStream
                 .range(2, number)
                 .boxed()
-                .anyMatch(ele -> number % ele == 0);
+                .noneMatch(ele -> number % ele == 0);
     }
 
     protected int sum(int number) {
